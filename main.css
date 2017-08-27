@@ -1,0 +1,298 @@
+ html,body{
+        	padding: 0;
+        	margin: 0;
+    	    height: 100%;
+    	    width: 100%;
+        }
+        div{
+        	border: none;
+        }
+        h4{
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent:6px;
+        }
+        .loading{
+            display:flex;
+            -webkit-justify-content:center;
+            align-items:center;
+        	background-color: white;
+        	width: 100%;
+        	height: 100%;
+        	position: fixed;
+        	top:0;
+        	left: 0;
+        	z-index: 100000;
+        }
+/*        .cus-nav{
+/*        	padding: 0;
+        	margin: 0;*/
+/*        	background-color: rgba(25,133,161,.0);
+        	border: none;
+        	border-radius: 0;*/
+/*        }*/
+        .cus-brand:hover{
+        	color: white;
+        }
+    	.test{
+/*    		background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg");*/
+            position: relative;
+            display: table;
+            background-color: rgba(25,133,161,.50);
+    		background-size: cover;
+/*    		background-attachment: fixed;*/
+    		text-align: center;
+    		min-height: 100%;
+    		height: 100%;
+    		min-width: 100%;
+    	}
+    	.info-cus{
+    		background-color: white;
+    		text-align:center;
+    		height: 450px;
+    		width: 450px;
+    		position: absolute;
+    		margin: 25px 0px 0px -225px;
+    		border-radius: 225px;
+    		border: none;
+    		left: 50%;
+    	}
+        .info-cus span{
+            color: black;
+        }
+    	@media only screen and (max-width: 450px){
+    		.tested{
+    			background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/54f703fcec7d62649d7c7e28b8e3bb8e.jpg");
+    		}
+    		.info-cus{
+    		height: 300px;
+    		width: 300px;
+    		position: absolute;
+    		margin: 100px 0px 0px -150px;
+    		border-radius: 150px;
+    		border: none;
+    		left: 50%;
+    		}
+    		h1{
+                font-size: medium;
+    		}
+    		h3{
+    			font-size: small;
+    		}
+/*            body,html{
+             		width: 450px;
+             	}*/
+    		}
+    	.tested{
+    		background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg");
+    		background-size: cover;
+    		background-attachment: fixed;
+    		text-align: center;
+    		height: 500px;
+    		width: 100%;
+    	}
+    	.tested0{
+    		background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/c5fada7e1498bbc3405a9bc0a392b0a3.jpg");
+    		background-size: cover;
+    		background-attachment: fixed;
+    		text-align: center;
+    		height: 500px;
+    		width: 100%;
+    	}
+        .cus-tech:hover{
+            cursor: pointer;
+        }
+        .cus-tech:hover img{
+            -webkit-animation-name:rote;
+            -moz-animation-name:rote;
+            animation-name:rote;
+            -webkit-animation-duration:0.4s;
+            -moz-animation-duration:0.4s;
+            animation-duration:0.4s;
+            -webkit-animation-timing-function:linear;
+            -moz-animation-timing-function:linear;
+            animation-timing-function:linear;
+        }
+        @keyframes rote{
+            0%{
+                -ms-transform:rotate(0deg);
+                transform:rotate(0deg);
+                -webkit-transform:rotate(0deg);
+            }
+            25%{
+                -ms-transform:rotate(90deg);
+                transform:rotate(90deg);
+                 -webkit-transform:rotate(90deg);
+            }
+            50%{
+                -ms-transform:rotate(180deg);
+                transform:rotate(180deg);
+                 -webkit-transform:rotate(180deg);
+            }
+            75%{
+                -ms-transform:rotate(270deg);
+                transform:rotate(270deg);
+                 -webkit-transform:rotate(270deg);
+            }
+            100%{
+                -ms-transform:rotate(360deg);
+                transform:rotate(360deg);
+                 -webkit-transform:rotate(360deg);
+            }
+        }
+        @-webkit-keyframes rote{
+            0%{
+                -ms-transform:rotate(0deg);
+                transform:rotate(0deg);
+                -webkit-transform:rotate(0deg);
+            }
+            25%{
+                -ms-transform:rotate(90deg);
+                transform:rotate(90deg);
+                 -webkit-transform:rotate(90deg);
+            }
+            50%{
+                -ms-transform:rotate(180deg);
+                transform:rotate(180deg);
+                 -webkit-transform:rotate(180deg);
+            }
+            75%{
+                -ms-transform:rotate(270deg);
+                transform:rotate(270deg);
+                 -webkit-transform:rotate(270deg);
+            }
+            100%{
+                -ms-transform:rotate(360deg);
+                transform:rotate(360deg);
+                 -webkit-transform:rotate(360deg);
+            }
+        }
+    	a{
+    		color: #fff;
+    	}
+    	a:hover{
+    		cursor: pointer;
+    	}
+    	#video{
+    		position: fixed;
+    		top:50%;
+    		left: 50%;
+    		transform: translateX(-50%) translateY(-50%);
+    		min-width: 100%;
+    		min-height: 100%;
+    		width: auto;
+    		height: auto;
+    		background: url(https://www.parkbliss.com/car-parking.0ee5d2da24b6e26bec03.jpg) no-repeat;
+    		transition: opacity 1s;
+    		z-index: -100;
+    		display: inline-block;
+    	}
+    	.circle{
+    		  -webkit-transition: background 0.3s cubic-bezier(0.45, -0.01, 0.58, 1);
+              -moz-transition: background 0.3s ease-in-out;
+              transition: background 0.3s ease-in-out;
+    	}
+    	.circle:hover{
+    		outline: none;
+    		cursor: pointer;
+    		background-color: rgba(25,133,161,.10);
+    	}
+    	.circle img.animated {
+         -webkit-transition-property: -webkit-transform;
+         -webkit-transition-duration: 1s;
+         -moz-transition-property: -moz-transform;
+         -moz-transition-duration: 1s;
+         transition-property: -moz-transform;
+         transition-duration: 1s;
+        }
+       .circle:hover img.animated {
+         -webkit-animation-name: pulse;
+         -moz-animation-name: pulse;
+         animation-name: pulse;
+         -webkit-animation-duration: 1.5s;
+         -moz-animation-duration: 1.5s;
+         animation-duration: 1.5s;
+         -webkit-animation-iteration-count: infinite;
+         -moz-animation-iteration-count: infinite;
+         animation-iteration-count: infinite;
+         -webkit-animation-timing-function: linear;
+         -moz-animation-timing-function: linear;
+         animation-timing-function: linear;
+        }
+        @keyframes pulse {
+        0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        }
+        50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        }
+        100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        }
+        }
+    	@-webkit-keyframes pulse {
+  		0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        }
+        50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        }
+        100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        }
+        }
+        @-moz-keyframes pulse {
+        0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+        }
+        50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        }
+        100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+        }
+        } 
+        .img-mod{ 
+            max-width: 100%;
+             overflow: hidden;
+         }
+        a img{
+            vertical-align: top;
+            transition: all .3s ease-in-out;
+            max-width: 100%;
+         }
+        a:hover img{
+             transform: scale(1.04);
+        }
+        .in{
+            -webkit-animation-name: into;
+            -webkit-animation-duration: 1.2s;
+            -webkit-animation-timing-function: cubic-bezier(0.17, 0.89, 0.67, 1.57);
+  /*          -webkit-transition:opacity 1.2s ease-out;*/
+            -webkit-animation-fill-mode:forwards;
+
+        }
+        @-webkit-keyframes into{
+            0%{
+                -webkit-transform: scale(0);
+                opacity: 1;
+            }
+            50%{
+                -webkit-transform: scale(1.05);
+                opacity: 1;
+            }
+            100%{
+                -webkit-transform: scale(1);
+                opacity: 1;
+            }
+        }
