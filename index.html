@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <link rel="stylesheet" type="text/css" href="https://typo.sofi.sh/typo.css"> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/html5media.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script> 
+    <style type="text/css">
+          h5{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+           .cus-icon{
+            width: 80px;
+            height: 80px;
+            margin: 0px auto;
+            position: relative;"
+          }
+          .cus-icon img{
+            width: 100%;
+            height: 100%;
+          }
+          .cus-tech{
+            height: 244px;
+            opacity: 0;
+          }
+/*          .cus-tech p{
+            display: none;
+          }
+          .cus-tech h4{
+            display: none;
+          }*/
+          .d1{
+            animation-delay: 0.3s;
+          }
+          .d2{
+            animation-delay: 0.6s;
+          }
+          .d3{
+            animation-delay: 0.9s;
+          }
+    </style>
+    <script type="text/javascript">
+    	// $(document).ready(function(){
+    	// 	$(".loading").css("display","none");
+    	// 	$(".test").css("display","block");
+    	// });
+    	window.onload=function(){
+            $(".loading").css("display","none");
+            var url="http://route.showapi.com/196-1?showapi_appid=43929&showapi_sign=a046b25771534b40a5e691850c5f10be&num=4"
+            $.ajax({
+                url:url,
+                dataType:"json",
+                type:"get",
+                success:function(res){
+                    for(var i=0;i<res.showapi_res_body.newslist.length;i++){
+                    console.log(res.showapi_res_body.newslist[i].picUrl);
+                    document.getElementById("cp"+i).src=res.showapi_res_body.newslist[i].picUrl;
+                    document.getElementById("ca"+i).innerHTML=res.showapi_res_body.newslist[i].title;
+                    document.getElementById("a"+i).href=res.showapi_res_body.newslist[i].url;
+                }
+                }
+            });
+    	};
+    	$(window).scroll(function(){
+    		var scroll_top = $(document).scrollTop();
+            var tested1=$(".cus-tech").offset().top+80; 
+             if (scroll_top==0) {
+             	$(".cus-nav").css("background-color","rgba(25,133,161,.0)");
+             }else{
+             	$(".cus-nav").css("background-color","rgba(25,133,161,.50)");
+             }
+             // alert(document.body.offsetHeight);
+             if(tested1-scroll_top<=document.body.offsetHeight){
+                // alert('yes');
+                $(".cus-tech").addClass('in');
+             }
+    	});
+    $(document).ready(function(){
+    	var b=$(document).scrollTop();
+    	var c=1;
+    	$(window).scroll(function(){
+    		b=$(document).scrollTop();
+    	})
+    	$("#shouye").click(function(){
+            $('html,body').animate({scrollTop:$('.test').offset().top}, 1500,'easeInOutExpo');       
+    	});
+    	$("#about").click(function(){
+            $('html,body').animate({scrollTop:$('.tested1').offset().top}, 1500,'easeInOutExpo');       
+    	});
+    	$(".circle").click(function(){
+            $('html,body').animate({scrollTop:$('.tested1').offset().top}, 1500,'easeInOutExpo');
+    	})
+        $("#xinwen").click(function(){
+            $('html,body').animate({scrollTop:$('#sports').offset().top}, 1500,'easeInOutExpo');
+        })
+    })
+    </script>
+</head>
+    <div class="loading">
+    	<div class="wrapper">
+          <div class="loader">
+             <div class="timerWrap">
+                <svg version="1.1" viewBox="131.623 175.5 120 160" preserveAspectRatio="xMinYMin meet" class="timer">
+                <path fill="#FFFFFF" d="M212.922,255.45l36.855-64.492c1.742-3.069,1.742-6.836-0.037-9.896c-1.783-3.06-5.037-4.938-8.581-4.938
+                h-99.158c-3.524,0-6.797,1.878-8.569,4.938c-1.773,3.06-1.792,6.827-0.03,9.896l36.846,64.491l-36.845,64.492
+                c-1.762,3.068-1.743,6.836,0.03,9.896c1.772,3.061,5.044,4.938,8.569,4.938h99.158c3.544,0,6.798-1.878,8.581-4.938
+                c1.779-3.06,1.779-6.827,0.037-9.896L212.922,255.45z M142.001,324.86l39.664-69.41l-39.664-69.41h99.158l-39.663,69.41
+                l39.663,69.41H142.001z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar navbar-fixed-top cus-nav">
+    		<div class="container" style="padding: 0">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      menu&nbsp<span class="glyphicon glyphicon-list"></span>
+      </button>
+      <a class="navbar-brand cus-brand">张海龙</a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a id="shouye">首页<span class="sr-only">(current)</span></a></li>
+        <li><a id="xinwen">新闻</a></li>
+        <li><a id="about">关于我</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="test">
+    	<video autoplay="autoplay" loop="loop" id="video">
+    		<source src="https://www.parkbliss.com/assets/car-parking.mp4" type="video/mp4">
+    	</video>
+    	<div class="circle" style="width: 80px;height: 80px;border: 3px solid #FFF;border-radius: 40px;position: absolute;bottom: 50px;left: -webkit-calc(50% - 40px);left:calc(50% - 40px);left:-moz-calc(50% - 40px)">
+    		<img class="animated" src="images/jiantou.png" style="width: 80%;height: 100%">
+    	</div>
+    </div>
+    <div class="tested1" style="background-color: white;color: black;padding-top: 50px;padding-bottom: 50px;">
+    <div class="container">
+         <div class="title text-center">
+               <h4>学习的技术</h4>
+               <div style="background-color: orange;height: 3px;width: 50px;margin:20px auto 35px auto"></div>
+         </div>
+         <div class="row text-center">
+             <div class="col-lg-3 cus-tech">
+                 <div class="cus-icon">
+                     <img class="logo" src="images/html5.png">
+                 </div>
+                 <h4>HTML+CSS</h4>
+                 <p style="max-width: 160px;margin:auto;text-align: center;word-break: break-all;padding-top: 20px;">根据品牌文化、价值观和差异性制定品牌策略，设计LOGO/VI系统；我们以前瞻性的眼光创造独特的品牌认同</p>
+             </div>
+             <div class="col-lg-3 cus-tech d1">
+                 <div class="cus-icon">
+                     <img class="logo" src="images/mysql.png">
+                 </div>
+                 <h4>MYSQL</h4>
+                  <p style="max-width: 160px;margin:auto;text-align: center;word-break: break-all;padding-top: 20px;">根据品牌文化、价值观和差异性制定品牌策略，设计LOGO/VI系统；我们以前瞻性的眼光创造独特的品牌认同</p>
+             </div>
+             <div class="col-lg-3 cus-tech d2">
+                 <div class="cus-icon">
+                     <img class="logo" src="images/php.png">
+                 </div>
+                 <h4>PHP</h4>
+                  <p style="max-width: 160px;margin:auto;text-align: center;word-break: break-all;padding-top: 20px;">根据品牌文化、价值观和差异性制定品牌策略，设计LOGO/VI系统；我们以前瞻性的眼光创造独特的品牌认同</p>
+             </div>
+             <div class="col-lg-3 cus-tech d3">
+                 <div class="cus-icon">
+                     <img class="logo" src="images/js.png">
+                 </div>
+                 <h4>JAVASCRIPT</h4>
+                  <p style="max-width: 160px;margin:auto;text-align: center;word-break: break-all;padding-top: 20px;">根据品牌文化、价值观和差异性制定品牌策略，设计LOGO/VI系统；我们以前瞻性的眼光创造独特的品牌认同</p>
+             </div>
+         </div>
+    </div>
+    </div>
+    <div class="tested">
+    <div class="container">
+         <div class="info-cus">
+            <span><h1>简介</h1></span>
+         	<span><h3>姓名:张海龙</h3></span>
+         	<span><h3>性别:男</h3></span>
+         	<span><h3>专业:计算机科学与技术</h3></span>
+         	<span><h3>出生日期:1996年8月5日</h3></span>
+         	<span><h3>QQ:468632883</h3></span>
+         	<span><h3>电话:18328019327</h3></span>
+         </div>
+    </div>
+    </div>
+    <div class="tested2" style="height: 500px;background-color: white">
+          
+    </div>
+    <div class="tested0">
+
+    </div>
+    <div id="sports" class="tested2" style="height: 1000px;background-color: white">
+          <div class="panel panel-default" style="padding-top: 50px;margin-bottom: 0">
+              <div class="panel-heading">体育新闻<a href="http://sports.ifeng.com/" target="_blank" style="position: absolute;right:15px; color: black">更多></a></div>
+              <div class="panel-body" style="color: black">
+                  <div class="row">
+                      <div class="col-lg-3">
+                      <div class="thumbnail">
+                      <a href="" id="a0" target="_blank">
+                      <p class="img-mod">
+                          <img src="" id="cp0" style="width: 100%">
+                      </p>
+                          <h5 id="ca0" style="color: black"></h3>
+                      </a>
+                      </div>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="thumbnail">
+                      <a href="" id="a1" target="_blank">
+                      <p class="img-mod">
+                          <img src="" id="cp1" style="width: 100%">
+                      </p>
+                          <h5 id="ca1" style="color: black"></h3>
+                      </a>
+                      </div>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="thumbnail">
+                      <a href="" id="a2" target="_blank">
+                      <p class="img-mod">
+                          <img src="" id="cp2" style="width: 100%">
+                      </p>
+                          <h5 id="ca2" style="color: black"></h3>
+                      </a>
+                      </div>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="thumbnail">
+                      <a href="" id="a3" target="_blank">
+                      <p class="img-mod">
+                          <img src="" id="cp3" style="width: 100%">
+                      </p>
+                          <h5 id="ca3" style="color: black"></h3>
+                      </a>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+ <!--    <section style="width: 100%;height: 1200px;background-color: white;padding-top: 6rem"></section> -->
+</html>
