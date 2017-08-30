@@ -84,14 +84,14 @@
              		width: 450px;
              	}*/
     		}
-    	.tested{
+/*     	.tested{
     		background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg");
     		background-size: cover;
     		background-attachment: fixed;
     		text-align: center;
     		height: 500px;
     		width: 100%;
-    	}
+    	} */
     .tested:before {
       content: ' ';
       position: fixed;
