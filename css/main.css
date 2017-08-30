@@ -189,7 +189,7 @@
     		background: url(https://www.parkbliss.com/car-parking.0ee5d2da24b6e26bec03.jpg) no-repeat;
     		transition: opacity 1s;
     		z-index: -100;
-    		display: inline-block;
+    		/* display: inline-block; */
     	}
     	.circle{
     		  -webkit-transition: background 0.3s cubic-bezier(0.45, -0.01, 0.58, 1);
