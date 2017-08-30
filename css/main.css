@@ -92,17 +92,6 @@
     		height: 500px;
     		width: 100%;
     	}
-    .tested0:before {
-      content: ' ';
-      position: fixed;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg") center 0 no-repeat;
-      background-size: cover;
-     }
     	.tested0{
     		background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/c5fada7e1498bbc3405a9bc0a392b0a3.jpg");
     		background-size: cover;
