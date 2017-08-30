@@ -62,6 +62,9 @@
             color: black;
         }
     	@media only screen and (max-width: 450px){
+            .test{
+                background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg");
+            }
     		.tested{
     			background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/54f703fcec7d62649d7c7e28b8e3bb8e.jpg");
             }
