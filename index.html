@@ -56,13 +56,15 @@
     	// });
     	window.onload=function(){
             $(".loading").css("display","none");
-            var url="https://route.showapi.com/196-1?showapi_appid=43929&showapi_sign=a046b25771534b40a5e691850c5f10be&num=4"
+            // var url="https://route.showapi.com/196-1?showapi_appid=43929&showapi_sign=a046b25771534b40a5e691850c5f10be&num=4"
+            var url="http://route.showapi.com/231-1?showapi_appid=43929&showapi_sign=a046b25771534b40a5e691850c5f10be&num=4"
             $.ajax({
                 url:url,
                 dataType:"json",
                 type:"get",
                 success:function(res){
-                    for(var i=0;i<res.showapi_res_body.newslist.length;i++){
+                    document.getElementById("panel-title").innerHTML=res.showapi_res_body.newslist[0].description;
+                    for(var i=0;i<4;i++){
                     console.log(res.showapi_res_body.newslist[i].picUrl);
                     document.getElementById("cp"+i).src=res.showapi_res_body.newslist[i].picUrl;
                     document.getElementById("ca"+i).innerHTML=res.showapi_res_body.newslist[i].title;
@@ -210,8 +212,8 @@
 
     </div>
     <div id="sports" class="tested2" style="background-color: white">
-          <div class="panel panel-default" style="padding-top: 50px;margin-bottom: 0">
-              <div class="panel-heading">体育新闻<a href="http://sports.ifeng.com/" target="_blank" style="position: absolute;right:15px; color: black">更多></a></div>
+          <div class="panel panel-default cus-panel" style="padding-top: 50px;margin-bottom: 0">
+              <div class="panel-heading" id='panel-title'></div>
               <div class="panel-body" style="color: black">
                   <div class="row">
                       <div class="col-lg-3">
@@ -267,3 +269,10 @@
         </div>
  <!--    <section style="width: 100%;height: 1200px;background-color: white;padding-top: 6rem"></section> -->
 </html>
+
+<?php
+$email='468632883@qq.com';
+$subject='你好';
+$message='测试一下';
+mail($email,$subject,$message);
+?>

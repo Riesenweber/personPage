@@ -295,6 +295,9 @@
             -webkit-animation-fill-mode:forwards;
 
         }
+        .cus-panel img{
+            height: 300px;
+        }
         @-webkit-keyframes into{
             0%{
                 -webkit-transform: scale(0);
