@@ -93,6 +93,12 @@
             #info_p1{
                 font-size: 0.94em;
             }
+            .cus_text{
+                width: 100%;
+                font-size: 2px;
+                text-indent: 0!important;
+                display: inline;
+            }
 /*            body,html{
              		width: 450px;
              	}*/
@@ -345,6 +351,28 @@
             border: none;
             border-radius: 0;
             letter-spacing: 5px;
+        }
+        .cus_title{
+            padding-top: 30px;
+            width: 100%;
+            text-align: center;
+            color: orange;
+            font-size: 19px;
+            letter-spacing: 1px;
+        }
+        .cus_bgtitle{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 10px;
+            font-size: 38px;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+        .cus_text{
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            opacity: 0.6;
         }
         .foot{
             height: 100px;
