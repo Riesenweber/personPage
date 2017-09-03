@@ -95,7 +95,7 @@
             }
             .cus_text{
                 width: 100%;
-                font-size: 2px;
+                font-size: 2px!important;
                 text-indent: 0!important;
                 display: inline;
             }
@@ -353,10 +353,10 @@
             letter-spacing: 5px;
         }
         .cus_title{
-            padding-top: 30px;
+            padding:15px 0 10px 0;
             width: 100%;
             text-align: center;
-            color: orange;
+            color: black;
             font-size: 19px;
             letter-spacing: 1px;
         }
@@ -368,11 +368,18 @@
             letter-spacing: 3px;
             font-weight: 800;
         }
+        .cus_bgtitle strong{
+            color: orange;
+        }
         .cus_text{
             text-align: center;
-            padding: 0;
+            font-size: 15px;
+            padding-top:5px;
             margin: 0;
             opacity: 0.6;
+        }
+        .tested2 .box-title-line{
+            margin-top: 10px;
         }
         .foot{
             height: 100px;
