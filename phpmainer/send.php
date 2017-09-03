@@ -33,13 +33,18 @@ $mail->Port       = 465;
   // $contact=$_GET['contact'];
   // $name=$_GET['name'];
   // $mail->Body = "<h3>$textarea</h3><h2></h2>";
-  setcookie('textarea',999);
+  $textarea=$_GET['text'];
+  $contact=$_GET['contact'];
+  $name=$_GET['name'];
   $body = file_get_contents('tpl.html'); //获取html网页内容
-  $mail->MsgHTML(str_replace('\\','',$body));
-echo $body;
+  $body2=str_replace('%textarea%',"$textarea",$body);
+  $body3=str_replace('%name%',"$name",$body2);
+  $body4=str_replace('%contact%',"$contact",$body3);
+  $mail->MsgHTML(str_replace('\\','',$body4));
+  // echo $body2;
 
-  // $mail->Send();
-  // echo "Message Sent OK";
+  $mail->Send();
+  echo '<script>window.location.href="success.html"</script>';
 } catch (phpmailerException $e) {
   echo $e->errorMessage(); //从PHPMailer捕获异常
 } catch (Exception $e) {

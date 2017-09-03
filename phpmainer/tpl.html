@@ -1,14 +1,20 @@
 ﻿
 <div style="width:100%;height:100%">
+<div style="padding:40px;background-image: url(http://weixin.qq.com/zh_CN/htmledition/images/weixin/letter/mmsgletter_2_bg.png)">
 <div class='main' style=
    "width:700px;
-    height:600px;
-    background-color:orange;
-    margin:0 auto"
+    min-height:500px;
+    background-color:white;
+    margin:0 auto;
+    padding:30px;"
 >
-  <?php
-       include 'send.php'
-       echo $_COOKIE['textarea'];
-  ?>
+<div>
+<p>收到来自 %name% 的回复:</p>
+<p>%textarea%</p>
 </div>
+<div style="padding:160px 0 0 0">
+    <p>他的联系方式为：%contact%</p>
+</div>
+</div>
+  </div>
 </div>
