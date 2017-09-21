@@ -73,7 +73,7 @@
     			background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/54f703fcec7d62649d7c7e28b8e3bb8e.jpg");
             }
             #video{
-                display: none;
+                display: none!important;
             }
     		.info-cus{
     		height: 300px;
