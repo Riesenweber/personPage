@@ -50,27 +50,41 @@
     		min-height: 100%;
     		height: 100%;
     		min-width: 100%;
-    	}
+        }
+        .info-box{
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 31, 31, 0.62);
+        }
     	.info-cus{
-    		background-color: white;
+            border: 3px solid white;
+            /* opacity: 0.1; */
     		text-align:center;
     		height: 450px;
     		width: 450px;
     		position: absolute;
     		margin: 25px 0px 0px -225px;
     		border-radius: 225px;
-    		border: none;
-    		left: 50%;
+            left: 50%;
     	}
         .info-cus span{
-            color: black;
+            color: white;
         }
     	@media only screen and (max-width: 450px){
             .test{
                 background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/ad8729b03956bd94b59fb95f29d31fbe.jpg");
             }
     		.tested{
-    			background-image: url("http://d1qmdf3vop2l07.cloudfront.net/salmon-dolphin.cloudvent.net/compressed/54f703fcec7d62649d7c7e28b8e3bb8e.jpg");
+    			background-position-x: 20%;
+            }
+            .tested0{
+                background-size: 1200px !important;
+                background-position-x: 70%;
+            }
+            .contact{
+                background: url("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3434219354,2346508093&fm=27&gp=0.jpg") no-repeat;
+                background-position-x: 80%;
+                background-size: 200%;
             }
             #video{
                 display: none!important;
@@ -81,7 +95,6 @@
     		position: absolute;
     		margin: 100px 0px 0px -150px;
     		border-radius: 150px;
-    		border: none;
     		left: 50%;
     		}
     		h1{
@@ -114,7 +127,8 @@
     	.tested0{
     		background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506327874127&di=bd81ec241bebafeaeb7959fba42971cd&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F56f0e83ead00d.jpg");
     		background-size: cover;
-    		background-attachment: fixed;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
     		text-align: center;
     		height: 500px;
     		width: 100%;
@@ -323,14 +337,23 @@
             width: 100%;
             /* height: 450px; */
             text-align: center;
-            background-color: #00bcd4;
+            background-color:rgba(1, 1, 1, .5);
             color: white;
         }
         .contact h1{
             margin-top: 0;
             padding-top: 50px;
         }
-        .contact input{
+        .contact input[type='text'],.area{
+            border: none;
+            margin: 10px 0px 10px 0px;
+            border-bottom: 2px solid orange;
+            background: rgba(1,1,1,0);
+            color: white;
+            resize: none;
+            width: 100%;
+        }
+        .contact input[type='submit']{
             margin: 10px 0px 10px 0px;
         }
         .box-title-line{
